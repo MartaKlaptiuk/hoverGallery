@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Six Pics</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script
+	  src="https://code.jquery.com/jquery-3.3.1.min.js"
+	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="container">
+
+	  <div class="box"></div>
+	  <div class="box"></div>
+	  <div class="box"></div>
+	  <div class="box"></div>
+	  <div class="box"></div>
+	  <div class="box"></div>
+
+	  <div class="overlay"></div>
+
+	</div>
+<script type="text/javascript">
+
+	$('.box').mouseover(function(){
+	var bg = $(this).css('background-image');	  
+		$('.box').css("background", "none");
+		$('.container').css("background-image", bg);	  
+	});
+
+
+	$('.box').mouseout(function(){		  
+		$('.box').css('background', "");
+		$('.container').css('background', '');		  
+	});
+</script>
+</body>
+</html>
